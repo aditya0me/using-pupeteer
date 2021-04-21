@@ -57,8 +57,8 @@ browserLaunchPromise.then(function (browserInstance) {
         // return singleArticleReader(  `https://www.indiatoday.in${validTopStories[0]}`  );
 
         let oneArticleReadingCompletedPromise = singleArticleReader(  `https://www.indiatoday.in${validTopStories[0]}`  );
-        //validTopStories.length
-        for(let i=1;i<3;i++){
+        
+        for(let i=1;i<validTopStories.length;i++){
             oneArticleReadingCompletedPromise = oneArticleReadingCompletedPromise.then(function(){
                 return singleArticleReader( `https://www.indiatoday.in${validTopStories[i]}` );
             });
